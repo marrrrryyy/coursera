@@ -1,38 +1,78 @@
 <!doctype html>
 <html>
 <style>
+	/*here section is called an element*/
 	section {
 	color: darkblue;
 	text-align: center;
 	font-style: italic;
 	font-family: sans-serif;
-}
+	}
+	/*here .grey is called a class*/
+	.grey {
+		color: grey;
+	}
+	/*here name is called an id then can only be used in div*/
+	#name {
+		font-family: fantasy;
+
+	}
+	/*it is also possible to use multiple ones that will both have the same style...*/
+
+	article, .rightside {
+		text-align: right; 
+	}
+	/*... or just when there will be both in one*/
+	p.bigandbold {
+		font-weight: bold;
+		font-size: 20px;
+	}
+	/*child selector: how to read the following one: every p that is a direct child of article*/
+
+	article > p {
+		color: pink;
+	}
+	/*descendant selector: how to read: every p that is inside article*/
+	article p {
+		color: purple;
+	}
+
+	/*for the purpose of using 2 classes in one this is the second one that will be used in the html part*/
+	.justbold {
+		font-weight: bold;
+	}
+
+
+
+
 </style>
 <head>
 	<meta charset="utf-8">
 	<title>More Tests</title>
 	this is the HEAD
 	<section>fill out section
-		<article>I</article>
-		<article>want</article>
-		<article>more</article>
-		<article>S</article>
-		<article>P</article>
-		<article>A</article>
-		<article>C</article>
-		<article>E</article>
+		this would be blue and the next ones grey
+		<article class="grey justbold">I</article>
+		<p class="bigandbold">want</p>
+		<p class="bigandbold">more</p>
+		<p>S</p>
+		<p>P</p>
+		<p>A</p>
+		<p>C</p>
+		<p>E</p>
 	</section>
+	<div id="name"> YO </div>
 </head>
-<body>
+<body class="grey">
 	<section>
 		<article id="top">
 		<a href="#end">Here you go DOWN</a>
 	</article>
 		things to remember:
 		<article>browser-sync start --server --directory --files "*"</article> 
-		<article>insted of "smaller than" use &lt;</article>
-		<article>instead of "greater than" use &gt;</article>
-		<article>instead of "and" use &amp; </article>
+		<article>insted of "smaller than" use <p> &lt;</p></article>
+		<article>instead of "greater than" use <p>&gt;</p></article>
+		<article>instead of "and" use <div><p> &amp;</p> </div></article>
 		<article>&copy;</article>
 		<article>hel&nbsp;lo</article>
 		<article>ok <span>well <div>hello</div> hello</span> or <span>OR</span> so</article>
@@ -42,7 +82,7 @@
 	<span>right after span</span>
 	<span>another span is following</span>
 	<span>and another one...</span>
-	<h3>what if some h3 is following?</h3>
+	<h3 class="rightside">what if some h3 is following?</h3>
 	<div>well that is enough</div>
 	<section>fill out section
 		<article>I</article>
